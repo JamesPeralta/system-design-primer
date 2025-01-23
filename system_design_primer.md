@@ -93,7 +93,7 @@ Introduction:
 - Horizontal scaling: We can scale our system by adding more servers.
     - Cons: Have to add co-ordination between multiple servers which can get complicated.
 
-![Untitled](System%20Design%20Primer%20f1c5f25ea01c41f1981a5beb5bfdfbde/Untitled.png)
+![Untitled](images/scaling.png)
 
 ## Load Balancer
 
@@ -105,7 +105,7 @@ Introduction:
     - Throughput: More servers processing tasks leads to more tasks done per unit of time.
 - To utilize full scalability and redundancy (but decrease operability), we can try to balance the load at each layer in the system. We can add LBs at three places:
 
-![Untitled](System%20Design%20Primer%20f1c5f25ea01c41f1981a5beb5bfdfbde/Untitled%201.png)
+![Untitled](images/load-balancers.png)
 
 - Key operational considerations:
     - Health checks.. This let’s the load balancer know which servers are still alive so we can route requests to them.
@@ -177,7 +177,7 @@ Introduction:
 
 ### Batch Processing and Stream Processing
 
-![Untitled](System%20Design%20Primer%20f1c5f25ea01c41f1981a5beb5bfdfbde/Untitled%202.png)
+![Untitled](images/batch_vs_stream.png)
 
 - Batch Processing:
     - Batch processing refers to processing data in large, discrete blocks (batches) at scheduled intervals or after accumulating a certain amount of data.
@@ -245,7 +245,7 @@ Introduction:
 - **Availability (A)**: The systems ability to remain accessible (serve requests) even if one ore more nodes in the system do down.
 - **Partition tolerance (P)**: A partition is a communication break (or a network failure) between any two nodes in the system. A partition-tolerant system continues to operate even if there are partitions in the system.
 
-![Untitled](System%20Design%20Primer%20f1c5f25ea01c41f1981a5beb5bfdfbde/Untitled%203.png)
+![Untitled](images/cap_theorem.png)
 
 ## PACELC Theorem
 
@@ -253,7 +253,7 @@ Introduction:
     - If there is a partition (`P`), a distributed system can tradeoff between availability and consistency (i.e., `A` and `C`);
     - else (`E`), when the system is running normally in the absence of partitions, thesystem can tradeoff between latency (`L`) and consistency (`C`)
 
-![Untitled](System%20Design%20Primer%20f1c5f25ea01c41f1981a5beb5bfdfbde/Untitled%204.png)
+![Untitled](images/PACELC.png)
 
 ## Proxies
 
